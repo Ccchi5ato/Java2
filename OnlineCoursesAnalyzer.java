@@ -245,15 +245,15 @@ public class OnlineCoursesAnalyzer {
         re.sort(new Comparator<List<String>>() {
             @Override
             public int compare(List<String> o1, List<String> o2) {
-                if (o1.get(1).equals(o2.get(1))){
+                if (o1.get(1).equals(o2.get(1))) {
                     return o1.get(0).compareTo(o2.get(0));
-                }else {
-                    return (int)(Math.floor(Double.parseDouble(o1.get(1))/Double.parseDouble(o2.get(1))));
+                } else {
+                    return (int) (Math.floor(Double.parseDouble(o1.get(1)) / Double.parseDouble(o2.get(1))));
                 }
             }
         });
         List<String> rre = new ArrayList<>();
-        for (List<String> a: re) {
+        for (List<String> a : re) {
             rre.add(a.get(0));
         }
         return rre;
